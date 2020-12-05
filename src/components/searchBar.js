@@ -11,11 +11,12 @@ export default function SearchBar() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div class="form-group has-search">
-        <span class="fa fa-search form-control-feedback"></span>
+      <div className="form-group has-search">
+        <span className="fa fa-search form-control-feedback"></span>
         <input
           type="text"
-          class="form-control"
+          className="form-control"
+          placeholder='Search Rocket....'
           value = {search}
           onChange = {(e) => setSearch(e.target.value)}
         />
