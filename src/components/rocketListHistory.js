@@ -49,13 +49,13 @@ export default function RocketList() {
                       <hr />
                       <div className="social-media">
                         <a href={d.links.reddit}>
-                          <i class="fab fa-reddit"></i>
+                          <i className="fab fa-reddit"></i>
                         </a>
                         <a href={d.links.article}>
-                          <i class="far fa-newspaper"></i>
+                          <i className="far fa-newspaper"></i>
                         </a>
                         <a href={d.links.wikipedia}>
-                          <i class="fab fa-wikipedia-w"></i>
+                          <i className="fab fa-wikipedia-w"></i>
                         </a>
                       </div>
                     </div>

@@ -8,12 +8,12 @@ export default function Navbar() {
         <a href="/" className="navbar-brand">
           SpaceX
         </a>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <Link className="nav-link" to="/SpaceXhistory">SpaceX History</Link>
+        <ul className="navbar-nav ml-auto">
+          <li className="nav-item active">
+            <Link className="nav-link" to="/SpaceXhistory">History</Link>
           </li>
-          <li class="nav-item active">
-            <Link className="nav-link" to="/SpaceXAddress">SpaceX Address</Link>
+          <li className="nav-item active">
+            <Link className="nav-link" to="/SpaceXAddress">Address</Link>
           </li>
         </ul>
       </div>

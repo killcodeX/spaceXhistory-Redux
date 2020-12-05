@@ -1,24 +1,29 @@
-import React from "react";
+import React, {useState} from "react";
 import { Pagination } from "react-bootstrap";
 
 export default function Pagintion() {
+  const [offset, setOffset] = useState(0);
+  const [counter, setCounter] = useState(1);
+
+  const handleClickPrev = () => {
+    setOffset(offset - 10)
+    setCounter(counter-1)
+
+    console.log('offset -->', offset)
+    console.log('counter -->', counter)
+  }
+
+  const handleClickNext = () => {
+    setOffset(offset + 10)
+    setCounter(counter+1)
+    console.log('offset -->', offset)
+    console.log('counter -->', counter)
+  }
   return (
     <Pagination className="brdr">
-      <Pagination.First />
-      <Pagination.Prev />
-      <Pagination.Item>{1}</Pagination.Item>
-      <Pagination.Ellipsis />
-
-      <Pagination.Item>{10}</Pagination.Item>
-      <Pagination.Item>{11}</Pagination.Item>
-      <Pagination.Item active>{12}</Pagination.Item>
-      <Pagination.Item>{13}</Pagination.Item>
-      <Pagination.Item disabled>{14}</Pagination.Item>
-
-      <Pagination.Ellipsis />
-      <Pagination.Item>{20}</Pagination.Item>
-      <Pagination.Next />
-      <Pagination.Last />
+      {offset !== 0 && <Pagination.Prev onClick={() => handleClickPrev()} />}
+      <Pagination.Item>{counter}</Pagination.Item>
+      <Pagination.Next onClick={() => handleClickNext()} />
     </Pagination>
   );
 }
