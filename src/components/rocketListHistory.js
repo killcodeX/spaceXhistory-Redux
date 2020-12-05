@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import data from "../data.json";
+import RocketHistoryApi from "../Api/RocketHistory";
 import { Collapse, Button } from "react-bootstrap";
 
 export default function RocketList() {
   const [open, setOpen] = useState(false);
   const [selectElement, setSelectElement] = useState(null);
+  
+  React.useEffect(() => {
+    RocketHistoryApi()
+  }, [])
 
   const handleClick = (id) => {
     setSelectElement(id);
